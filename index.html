@@ -10,18 +10,18 @@
       background-color: black;
       display: flex;
       justify-content: center;
-      align-items: flex-start;
+      align-items: center; /* center vertically */
       min-height: 100vh;
       margin: 0;
       font-family: 'Open Sans', sans-serif;
       color: #fff;
-      overflow-y: auto;
+      overflow-y: auto; /* scroll if content is taller than viewport */
       position: relative;
-      padding-top: 2em;
+      padding: 2em 0; /* some top/bottom spacing */
     }
 
     .card {
-      background: #000; /* changed to black */
+      background: #000; /* fully black */
       border-radius: 20px;
       box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
       width: 85vw;
@@ -31,7 +31,7 @@
       animation: moveIn 2s ease-out forwards;
       position: relative;
       z-index: 2;
-      margin-bottom: 2em;
+      margin: 0 auto;
     }
 
     .card img.birthday {
@@ -75,11 +75,6 @@
       font-size: 1.5em;
       cursor: pointer;
       z-index: 10;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes moveIn {
